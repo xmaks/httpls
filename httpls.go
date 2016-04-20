@@ -254,6 +254,8 @@ func (this *HttpUrl) Ls(fileNames chan<- string) {
             }
         }
         parseNode(doc)
+    } else {
+        log.Println(err.Error())
     }
 }
 
