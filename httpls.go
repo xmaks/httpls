@@ -110,6 +110,9 @@ func NewHttpUrls() (*HttpUrls, error) {
     flagSet.BoolVar(&httpUrls.Debug, "d", false, "Show debug info")
     flagSet.Parse(os.Args[1:])
 
+    //httpUrls.Username = ""
+    //httpUrls.SetPassword([]byte(""))
+
     if httpUrls.ReadPassword {
         if terminal.IsTerminal(syscall.Stdin) {
             fmt.Print("Password:")
